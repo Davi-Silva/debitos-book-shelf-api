@@ -12,9 +12,7 @@
     "start": "node dist/server.js",
     "build": "rm -rf dist/ && tsc",
     "dev": "nodemon src/server.ts",
-    "test": "vitest",
-    "test:ci": "vitest --run",
-    "coverage": "vitest run --coverage"
+    "prod": "yarn build && yarn start"
   },
   "dependencies": {
     "ajv": "^8.11.2",
