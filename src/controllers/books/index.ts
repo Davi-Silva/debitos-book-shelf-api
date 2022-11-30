@@ -141,8 +141,6 @@ export const updateBook = async (req: Request, res: Response) => {
       isbn_no,
     };
 
-    console.log({ updatedObj });
-
     const bookRemoved = books.filter((book) => book.id !== bookId);
 
     bookRemoved.push(updatedObj);
@@ -151,11 +149,14 @@ export const updateBook = async (req: Request, res: Response) => {
       return a.id - b.id;
     });
 
-    console.log(sorted);
+    const written = await saveToFile({
+      books: sorted,
+      authors: authors,
+    });
 
     return res.status(200).send({
       statusCode: 200,
-      results: {},
+      results: written,
       errors: [],
     });
   } catch (err) {
@@ -176,18 +177,24 @@ export const deleteBook = async (req: Request, res: Response) => {
 
     const bookId = parseInt(id);
 
-    const filteredBooks = books.filter((book) => book.id !== bookId);
+    const foundBook = books.filter((book) => book.id === bookId);
 
-    if (filteredBooks.length === 0) {
-      return res.status(200).send({
-        statusCode: 200,
+    if (foundBook.length === 0) {
+      return res.status(400).send({
+        statusCode: 400,
         results: {},
         errors: ['Book not found'],
       });
     }
 
+    const filteredBooks = books.filter((book) => book.id !== bookId);
+
+    const sorted = filteredBooks.sort((a, b) => {
+      return a.id - b.id;
+    });
+
     const written = await saveToFile({
-      books: filteredBooks,
+      books: sorted,
       authors: authors,
     });
 
