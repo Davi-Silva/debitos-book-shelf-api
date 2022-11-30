@@ -1,5 +1,5 @@
 {
-  "name": "book-shelf-api",
+  "name": "debitos-book-shelf-api",
   "author": {
     "email": "davi.cunha.silva.lu@gmail.com",
     "name": "Davi Silva",
@@ -14,8 +14,7 @@
     "dev": "nodemon src/server.ts",
     "test": "vitest",
     "test:ci": "vitest --run",
-    "coverage": "vitest run --coverage",
-    "migrate": "yarn sequelize db:migrate"
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "cors": "^2.8.5",

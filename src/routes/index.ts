@@ -5,5 +5,5 @@ import authors from './authors';
 
 export default (app: Application): void => {
   app.use('/books', books);
-  app.use('/user/auth', authors);
+  app.use('/authors', authors);
 };

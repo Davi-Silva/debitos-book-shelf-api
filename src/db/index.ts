@@ -1,0 +1,26 @@
+export const database = {
+  books: [
+    { id: 1, author_id: 1, name: 'Book name 1', isbn_no: '123456' },
+    { id: 2, author_id: 10, name: 'Book name 2', isbn_no: '453234' },
+    { id: 3, author_id: 5, name: 'Book name 3', isbn_no: '456322' },
+    { id: 4, author_id: 9, name: 'Book name 4', isbn_no: '777664' },
+    { id: 5, author_id: 2, name: 'Book name 5', isbn_no: '908221' },
+    { id: 6, author_id: 6, name: 'Book name 6', isbn_no: '542622' },
+    { id: 7, author_id: 9, name: 'Book name 7', isbn_no: '555533' },
+    { id: 8, author_id: 3, name: 'Book name 8', isbn_no: '126528' },
+    { id: 9, author_id: 7, name: 'Book name 9', isbn_no: '867544' },
+    { id: 10, author_id: 4, name: 'Book name 10', isbn_no: '888862' },
+  ],
+  authors: [
+    { id: 1, name: 'Author name 1', country: 'Germany' },
+    { id: 2, name: 'Author name 2', country: 'Finland' },
+    { id: 3, name: 'Author name 3', country: 'Austria' },
+    { id: 4, name: 'Author name 4', country: 'New Zealand' },
+    { id: 5, name: 'Author name 5', country: 'Portugal' },
+    { id: 6, name: 'Author name 6', country: 'Canada' },
+    { id: 7, name: 'Author name 7', country: 'Italy' },
+    { id: 8, name: 'Author name 8', country: 'China' },
+    { id: 9, name: 'Author name 9', country: 'France' },
+    { id: 10, name: 'Author name 10', country: 'Brazil' },
+  ],
+};
