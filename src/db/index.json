@@ -1,14 +1,8 @@
 {
   "books": [
     { "id": 1, "author_id": 1, "name": "Book name 1", "isbn_no": "123456" },
-    { "id": 2, "author_id": 10, "name": "Book name 2", "isbn_no": "453234" },
     { "id": 5, "author_id": 2, "name": "Book name 5", "isbn_no": "908221" },
-    {
-      "id": 6,
-      "author_id": 7,
-      "name": "Some Test Book Name",
-      "isbn_no": "436266"
-    },
+    { "id": 6, "author_id": 7, "name": "Book", "isbn_no": "436266" },
     { "id": 7, "author_id": 9, "name": "Book name 7", "isbn_no": "555533" },
     { "id": 8, "author_id": 3, "name": "Book name 8", "isbn_no": "126528" },
     { "id": 10, "author_id": 4, "name": "Book name 10", "isbn_no": "888862" }

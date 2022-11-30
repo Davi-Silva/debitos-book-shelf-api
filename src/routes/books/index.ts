@@ -1,6 +1,11 @@
 import { Router } from 'express';
 
-// import { authenticateUser } from '@middlewares/Bookization';
+import {
+  validateCreateBook,
+  validateUpdateBook,
+  validateDeleteBook,
+  validateGetBook,
+} from '../../middlewares/validators/books';
 
 import {
   createBook,
@@ -12,14 +17,14 @@ import {
 
 const router = Router();
 
-router.post('', createBook);
+router.post('', validateCreateBook, createBook);
 
 router.get('', getBooks);
 
-router.get('/:id', getBook);
+router.get('/:id', validateGetBook, getBook);
 
-router.put('/:id', updateBook);
+router.put('/:id', validateUpdateBook, updateBook);
 
-router.delete('/:id', deleteBook);
+router.delete('/:id', validateDeleteBook, deleteBook);
 
 export default router;

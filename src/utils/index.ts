@@ -3,3 +3,4 @@ export * from './logger';
 export * from './environments';
 export * from './fs';
 export * from './random';
+export * from './ajv';

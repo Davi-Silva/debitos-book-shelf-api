@@ -1,6 +1,11 @@
 import { Router } from 'express';
 
-// import { authenticateUser } from '@middlewares/authorization';
+import {
+  validateCreateAuthor,
+  validateDeleteAuthor,
+  validateGetAuthor,
+  validateUpdateAuthor,
+} from '../../middlewares/validators/authors';
 
 import {
   createAuthor,
@@ -12,14 +17,14 @@ import {
 
 const router = Router();
 
-router.post('', createAuthor);
+router.post('', validateCreateAuthor, createAuthor);
 
 router.get('', getAuthors);
 
-router.get('/:id', getAuthor);
+router.get('/:id', validateGetAuthor, getAuthor);
 
-router.put('/:id', updateAuthor);
+router.put('/:id', validateUpdateAuthor, updateAuthor);
 
-router.delete('/:id', deleteAuthor);
+router.delete('/:id', validateDeleteAuthor, deleteAuthor);
 
 export default router;
