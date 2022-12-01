@@ -29,14 +29,14 @@ export const createAuthor = async (req: Request, res: Response) => {
     });
 
     return res.status(200).send({
-      status_code: 200,
+      statusCode: 200,
       results: written,
       errors: [],
     });
   } catch (err: any) {
     console.log(err);
     return res.status(500).send({
-      status_code: 500,
+      statusCode: 500,
       results: {},
       errors: [err.message],
     });
@@ -78,7 +78,7 @@ export const getAuthor = async (req: Request, res: Response) => {
     });
   } catch (err) {
     return res.status(500).send({
-      status_code: 500,
+      statusCode: 500,
       results: {},
       errors: [err],
     });
@@ -104,7 +104,7 @@ export const getAuthors = async (req: Request, res: Response) => {
     });
   } catch (err: any) {
     return res.status(500).send({
-      status_code: 500,
+      statusCode: 500,
       results: {},
       errors: [err.message],
     });
@@ -159,7 +159,7 @@ export const updateAuthor = async (req: Request, res: Response) => {
     });
   } catch (err) {
     return res.status(500).send({
-      status_code: 500,
+      statusCode: 500,
       results: {},
       errors: [err],
     });
@@ -200,7 +200,7 @@ export const deleteAuthor = async (req: Request, res: Response) => {
     });
   } catch (err) {
     return res.status(500).send({
-      status_code: 500,
+      statusCode: 500,
       results: {},
       errors: [err],
     });
